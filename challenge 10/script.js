@@ -1,12 +1,15 @@
-//escreva uma funcao para encontrar o maior numero em um array sem utilizar Math.max()
+// crie uma função que encontre o menor numero em um array
+const nums = [0, 4, 2, 8, 2, 7, 5, 1]
 
-const numeros = [1, 382, 3, 123, 44, 444];
-let maiorNumero = -Infinity; 
+function findMax(array) {
+  var maximumNumber = 0
+  for (let i = 0; i <= array.length; i++) {
+    if (array[i] >= maximumNumber) {
+      maximumNumber = array[i]
 
-for (let i = 0; i < numeros.length; i++) {
-  if (numeros[i] > maiorNumero) {
-    maiorNumero = numeros[i];
+    }
   }
+  return maximumNumber
 }
 
-console.log(maiorNumero);
+console.log(findMax(nums))
